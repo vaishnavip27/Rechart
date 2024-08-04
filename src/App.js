@@ -1,5 +1,6 @@
 import "./App.css";
+import LineGraph from "./components/Line";
 
 export default function App() {
-  return <div>Lets see charts</div>;
+  return <LineGraph />;
 }
