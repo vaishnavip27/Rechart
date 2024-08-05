@@ -1,5 +1,5 @@
 import { Line } from "react-chartjs-2";
-import { lineChartData } from "../FAKE_DATA.JS";
+import { lineChartData } from "../FAKE_DATA.js";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -22,6 +22,17 @@ ChartJS.register(
 );
 
 export default function LineGraph() {
-  const options = {};
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top",
+      },
+      title: {
+        display: true,
+        text: "This is a graph representing my daily steps",
+      },
+    },
+  };
   return <Line options={options} data={lineChartData} />;
 }
